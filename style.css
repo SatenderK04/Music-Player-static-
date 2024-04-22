@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+/* ############################### Container #################################### */
+.container {
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ############################ Left Container ################################### */
+.left-container {
+  height: 37rem;
+  border-radius: 1rem;
+  background-color: rgb(0, 0, 0);
+  width: 40%;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  position: relative;
+}
+.playing-song-img {
+  margin-top: 10%;
+  height: 16rem;
+  width: 16rem;
+  background-color: red;
+  border-radius: 5%;
+  border: 2px solid white;
+  overflow: hidden;
+  object-position: center;
+  object-fit: contain;
+}
+
+.playing-song-img img {
+  border-radius: 5%;
+  height: 100%;
+}
+.now-playing {
+  letter-spacing: 0.05rem;
+  /* margin-bottom: 0rem; */
+}
+.player {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  bottom: 0;
+  margin: 1rem;
+  margin-top: 0;
+  height: 10rem;
+  width: 95%;
+  /* background-color: rgb(46, 46, 61); */
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.progress-bar {
+  /* margin: 0rem 0.5rem; */
+  position: absolute;
+  left: 11%;
+  width: 78%;
+  min-width: 78%;
+  max-width: 78%;
+  height: 3px;
+  /* opacity: 0.6; */
+  cursor: pointer;
+  appearance: none;
+  background-color: rgb(159, 159, 159);
+}
+
+.curr-time {
+  /* margin-left: 1.75rem; */
+  left: 5%;
+  position: absolute;
+  /* margin-right: 0; */
+  /* border: 2px solid red; */
+}
+
+.tot-time {
+  position: absolute;
+  right: 5%;
+}
+.time {
+  font-size: 0.75rem;
+  /* margin: 0.5rem; */
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+  border: 4px solid white;
+  border-radius: 50%;
+}
+.progress {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  /* margin-top: 0; */
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 0.5rem;
+  /* border: 2px solid red; */
+}
+.volume-bar {
+  margin: 0.75rem;
+  height: 3px;
+  width: 40%;
+  background-color: rgb(159, 159, 159);
+  appearance: none;
+  /* opacity: 0.6; */
+  cursor: pointer;
+}
+.playing-music-name {
+  margin-top: 1rem;
+}
+
+.music-info {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.fa-circle-play {
+  /* display: none; */
+  font-size: 3rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  border: 2px solid white;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.fa-circle-play:hover {
+  scale: 1.15;
+  transition: all 0.25s;
+}
+
+.fa-circle-pause {
+  font-size: 3rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 0.25rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.fa-circle-pause:hover {
+  scale: 1.15;
+  transition: all 0.25s;
+}
+.icons {
+  font-size: 2rem;
+  opacity: 0.8;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+.mute {
+  cursor: pointer;
+}
+.icons:hover {
+  opacity: 1;
+}
+/* ############################# Right Container ############################# */
+.right-container {
+  height: 37rem;
+  border-radius: 1rem;
+  background-color: rgb(0, 0, 0);
+  width: 30%;
+  margin: 2rem;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.search .user {
+  font-size: 1.25rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 30%;
+  cursor: pointer;
+  outline: none;
+  background-color: rgba(51, 51, 51, 0.907);
+  border: none;
+  color: white;
+}
+
+.duration {
+  font-size: 0.75rem;
+  top: 25%;
+  position: absolute;
+  right: 5%;
+}
+
+.search .search-btn {
+  font-size: 1.25rem;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 30%;
+  outline: none;
+  background-color: rgba(51, 51, 51, 0.907);
+  border: none;
+  color: white;
+}
+
+.search input[type="text"] {
+  height: 2rem;
+  width: 80%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: rgba(20, 20, 20, 0.907);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.songs-container {
+  height: 80%;
+  overflow: scroll;
+  margin-top: 2rem;
+  /* border: 2px solid red; */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.songs-container .songs img {
+  height: 45px;
+  width: 45px;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.songs li {
+  position: relative;
+  margin: 0 1.75rem;
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.356);
+  color: white;
+  cursor: pointer;
+}
+
+.songs li:hover {
+  opacity: 0.8;
+}
+.singer {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+/* ??????????????????????????????/ MEDIA QUERIES /?????????????????????????????????? */
+
+@media (max-width: 500px) {
+  .container {
+    display: block;
+  }
+
+  .left-container {
+    margin: 1rem 1rem;
+    width: 22rem;
+    height: 500px;
+  }
+  .playing-song-img {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .now-playing {
+    font-size: 1rem;
+  }
+  .fa-circle-pause {
+    scale: 0.85;
+    margin: 0 0.25rem;
+  }
+
+  .fa-circle-play {
+    scale: 0.85;
+    margin: 0 0.25rem;
+  }
+  .fa-circle-pause:hover {
+    scale: 1;
+  }
+  .fa-circle-play:hover {
+    scale: 1;
+  }
+
+  .icons {
+    scale: 0.85;
+  }
+
+  .progress-bar {
+    position: absolute;
+    left: 15%;
+    width: 6rem;
+    min-width: 70%;
+    max-width: 100%;
+    height: 3px;
+    cursor: pointer;
+    appearance: none;
+    background-color: rgb(159, 159, 159);
+  }
+
+  .right-container {
+    margin: 1rem 1rem;
+    width: 22rem;
+    height: 500px;
+    padding-top: 0.5rem;
+  }
+
+  .songs {
+    margin-top: 0rem;
+    font-size: 0.85rem;
+  }
+
+  .singer {
+    font-size: 0.65rem;
+  }
+}
